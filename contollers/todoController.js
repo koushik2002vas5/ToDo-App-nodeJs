@@ -18,6 +18,16 @@
 // };
 
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+mongoose.connect('cluster0.c4qsxwg.mongodb.net/');
+var todoSchema = new mongoose.Schema({
+    item: String
+});
+var Todo = mongoose.model('Todo',todoSchema);
+var itemOne=Todo({item: 'buy Flowers'}).save(function(err){
+    if(err) throw err;
+    console.log('item saved');
+})
 var data = [{item:'get milk'},{item:'walk dog'},{item:'drinking water'}];
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 

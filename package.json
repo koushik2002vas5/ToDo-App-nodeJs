@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/koushik2002vas5/ToDo-App-nodeJs#readme",
   "dependencies": {
+    "-": "^0.0.1",
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.18.1",
+    "save": "^2.9.0"
   }
 }
